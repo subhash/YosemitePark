@@ -1,0 +1,14 @@
+@(message: String)
+
+@main("Welcome to Play 2.0") {
+
+	@defining(Array("Horsetail Falls.mp4", "Yosemite Bears.mp4", "Yosemite Intro.mp4")) { files =>
+		@for(file <- files){
+			<video src="@routes.Assets.at("videos/"+file)" controls>
+			</video>        	
+		}
+	}
+        
+    
+    
+}
